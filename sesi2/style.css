@@ -1,0 +1,54 @@
+body{
+    background-color: #f0f0f0;
+    font-family: "Marvel", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+div{
+    border: 5px solid #black;
+    border-top: 10px solid red;
+    border-radius: 20px;
+
+    padding: 20px 5px 10px 10px;
+}
+
+h1{
+    text-decoration: underline;
+}
+
+a:visited{
+    color: cyan;
+}   
+
+a:hover{
+    color: gold;
+}
+
+a:active{
+    color: red;
+}
+
+button{
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+marquee-container{
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-text{
+    display: inline-block;
+    animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
