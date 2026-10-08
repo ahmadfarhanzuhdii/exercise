@@ -1,54 +1,110 @@
-body{
-    background-color: #f0f0f0;
-    font-family: "Marvel", sans-serif;
-    margin: 0;
-    padding: 0;
-}
+        /* ===== 1. RESET & PENGATURAN DASAR ===== */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-div{
-    border: 5px solid #black;
-    border-top: 10px solid red;
-    border-radius: 20px;
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            padding: 16px;
+        }
 
-    padding: 20px 5px 10px 10px;
-}
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
 
-h1{
-    text-decoration: underline;
-}
+        .section {
+            border: 1px solid #000;
+            margin-bottom: 16px;
+        }
 
-a:visited{
-    color: cyan;
-}   
+        /* ===== 2. MENU ===== */
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
 
-a:hover{
-    color: gold;
-}
+        .menu nav a {
+            margin-left: 16px;
+        }
 
-a:active{
-    color: red;
-}
+        /* ===== 3. HEADER (2 KOLOM) ===== */
+        .header {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
 
-button{
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+        .header-text,
+        .header-image {
+            flex: 1;
+            width: 500px;
+            height: auto;
+        }
 
-marquee-container{
-    overflow: hidden;
-    white-space: nowrap;
-}
+        .header-text p,
+        .header-text button {
+            margin-top: 12px;
+        }
 
-.marquee-text{
-    display: inline-block;
-    animation: scroll 10s linear infinite;
-}
+        .header-image img {
+            margin: 0 auto;
+        }
 
-@keyframes scroll {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
-}
+        /* ===== 4. BIODATA & PORTOFOLIO ===== */
+        .section-title {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .grid-item {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #000;
+        }
+
+        .grid-item img {
+            margin: 0 auto 10px;
+        }
+
+        /* ===== 5. RESPONSIVE ===== */
+
+        /* Tablet */
+        @media (max-width: 992px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* HP */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .menu {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .menu nav a {
+                margin: 0 8px;
+            }
+        }

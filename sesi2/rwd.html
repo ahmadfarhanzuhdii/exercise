@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+            'header'
+            'menu'
+            'main'
+            'facts'
+            'footer';
+            gap: 10px;
+            background-color: white;
+            padding: 5px;
+        }
+        .header {
+            grid-area: header;
+            background-color: navy;
+            text-align: center;
+            color: white;
+        }
+        .menu{
+            grid-area: menu;
+        }
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .menu li {
+            background-color: gold;
+            padding: 8px;
+            margin-bottom: 7px;
+            text-decoration: none;
+            color: #ffffff;
+        }
+        .menu li:hover {
+            background-color: white;
+        }
+
+        .content {
+            grid-area: main;
+        }
+        .facts {
+            grid-area: facts;
+        }
+        .footer {
+            grid-area: footer;
+            text-align: center;
+            background-color: navy;
+            color: white;
+        }
+
+        @media (min-width: 600px) {
+            .header {grid-area: 1 / span 6;}
+            .menu {grid-area: 2 / span 1;}
+            .content {grid-area: 2 / span 4;}
+            .facts {grid-area: 3 / span 6;}
+            .footer {grid-area: 4 / span 6;}
+        }
+
+        @media (min-width: 768px) {
+            .header {grid-area: 1 / span 6;}
+            .menu {grid-area: 2 / span 1;}
+            .content {grid-area: 2 / span 4;}
+            .facts {grid-area: 3 / span 6;}
+            .footer {grid-area: 4 / span 6;}
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="header">Header</div>
+        <div class="menu">
+            <ul>
+                <li><a href="#">Flight</li>
+                <li><a href="#">Train</a></li>
+                <li><a href="#">Bus</a></li>
+                <li><a href="#">Hotel</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>The City</h1>
+            <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city. The old town is situated next to the old harbour and is the matrix around which the whole urban area was developed. Chania lies along the north west coast of the island Crete.</p>
+        </div> 
+        <div class="facts">  
+            <h2>Facts:</h2>
+            <ul>
+                <li>Chania is a city on the island of Crete</li>
+                <li>Crete is a Greek island in the Mediterranean Sea</li>
+            </ul>
+        </div>
+        <div class="footer"><p>Resize the browser window to see the responsive effect.</p></div>
+    </div>
+</body>
+</html>
